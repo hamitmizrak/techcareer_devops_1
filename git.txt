@@ -50,4 +50,22 @@ git tag --delete version1
 
 ################################################################################
 BRANCH
+git add .
+git commit -m "revize"
+git push
+
+
+git branch (Listelemek)
+
+git branch frontend
+git checkout frontend
+mkdir data.txt
+git add .
+git commit -m "frontend data"
+
+git checkout main
+
+git branch -D frontend (Sil)
+
+git checkout -b database (Branch oluştur ve o branh'e dallan)
 
