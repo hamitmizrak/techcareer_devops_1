@@ -1,1 +1,4 @@
 git --version
+
+https://github.com/settings/profile
+https://github.com/settings/keys
