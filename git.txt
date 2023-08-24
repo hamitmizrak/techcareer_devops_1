@@ -3,6 +3,7 @@ git config --global user.name "hamitmizrak"
 git config --global user.email "hamitmizrak@gmail.com"
 git --version
 
+################################################################################
 
 git init
 git add .
@@ -24,6 +25,17 @@ git push -u origin main
 ################################################################################
 git config --global alias.log2 "log --all --graph --decorate --oneline"
 
+
+################################################################################
+STASH
+git stash
+git stash save "stash_adi1"
+git stash list
+git stash pop
+git stash drop stash_adi1
+git stash apply stash_adi1
+
+
 ################################################################################
 TAG=Version
 git tag 
@@ -35,4 +47,7 @@ git checkout main
 
 git push origin2 version1
 git tag --delete version1
+
+################################################################################
+BRANCH
 
