@@ -69,3 +69,48 @@ git branch -D frontend (Sil)
 
 git checkout -b database (Branch oluştur ve o branh'e dallan)
 
+git merge frontend
+git merge --no-ff frontend
+
+################################################################################
+CONFLICT YEMEMEK
+git add .
+git stash
+git checkout main
+git pull
+git checkout frontend
+git rebase main
+git stash apply open@{1}
+
+git add .
+git stash
+git reset HEAD~1
+git add .
+git commit -m "after commit"
+git push --force
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
