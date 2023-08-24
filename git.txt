@@ -1,4 +1,21 @@
 git --version
 
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:hamitmizrak/techcareer_devops_1.git
+
+
+-- SSH-KEYGEN
+ssh-keygen -t rsa -b 4096 -C "hamitmizrak@gmail.com"
+ssh -T git@github.com
+cat ~/.ssh/id_rsa.pub
+
 https://github.com/settings/profile
 https://github.com/settings/keys
+yeni bir keygen oluştur ve içine gönder =>
+
+git push -u origin main
+
+
