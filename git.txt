@@ -1,4 +1,8 @@
+
+git config --global user.name "hamitmizrak"
+git config --global user.email "hamitmizrak@gmail.com"
 git --version
+
 
 git init
 git add .
@@ -18,5 +22,7 @@ yeni bir keygen oluştur ve içine gönder =>
 git push -u origin main
 
 ################################################################################
+git config --global alias.log2 "log --all --graph --decorate --oneline"
+
 
 
