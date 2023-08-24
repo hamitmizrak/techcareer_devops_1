@@ -1,0 +1,18 @@
+docker -v
+docker --version
+docker version
+
+docker search nginx
+docker pull  nginx
+docker pull nginx:latest
+docker pull nginx:1.15.1
+
+docker container --help
+docker container --publish 7878:80 nginx
+docker container -p 7878:80 imageID
+docker container -p 7878:80 --detach nginx
+docker container -p 7878:80 -d --name deneme_44 nginx
+docker container stop containerID
+docker container start containerID
+docker container rm -f containerID
+docker container prune -y
