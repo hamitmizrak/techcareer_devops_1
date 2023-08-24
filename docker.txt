@@ -16,3 +16,13 @@ docker container stop containerID
 docker container start containerID
 docker container rm -f containerID
 docker container prune -y
+
+TİS
+docker container top containerID
+docker container inspect containerID
+docker container stats containerID
+
+docker container run -d -p 7878:80 --name my_special_nginx --rm nginx:latest
+docker container run -d -p 7878:80 --name my_special_nginx --rm --cpus="2" nginx:latest
+
+docker container run -d -p 7879:80 --name my_special_data2 --rm --cpus="2" --memory=200m --memory-swap=450m nginx
