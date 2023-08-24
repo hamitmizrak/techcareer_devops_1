@@ -24,5 +24,15 @@ git push -u origin main
 ################################################################################
 git config --global alias.log2 "log --all --graph --decorate --oneline"
 
+################################################################################
+TAG=Version
+git tag 
+git tag version1
+git show version1
 
+git checkout version1
+git checkout main
+
+git push origin2 version1
+git tag --delete version1
 
