@@ -24,5 +24,12 @@ docker container stats containerID
 
 docker container run -d -p 7878:80 --name my_special_nginx --rm nginx:latest
 docker container run -d -p 7878:80 --name my_special_nginx --rm --cpus="2" nginx:latest
-
 docker container run -d -p 7879:80 --name my_special_data2 --rm --cpus="2" --memory=200m --memory-swap=450m nginx
+
+docker container run -it nginx bash (Container oluştur ve terminale bağlan)
+docker container exec -it containerID bash (Çalışan container terminale bağlan)
+docker container start -ai containerID
+
+docker search ubuntu
+docker pull ubuntu
+docker pull centos
