@@ -34,20 +34,69 @@ docker search ubuntu
 docker pull ubuntu
 docker pull centos
 
---- VOLUME
+--- BIND MOUNT / VOLUME
+-- BIND MOUNT
 docker search nginx
 docker pull nginx
 docker container run -d --rm  -p 7777:80 --name web_nginx nginx
 docker container exec -it web bash
 
+mkdir web
+cd web
+cat >> index.html
+<html>
+<body>
+<h1> MErhabalar </h1>
+</body>
+</html>
+
 pwd
 docker container run -d --rm  -p 8888:80 --name web_nginx2 -v /home/hamit/Desktop/web:/usr/share/nginx/html   nginx
 
+docker container run
+-d (detach: Arka planda çalış)
+--rm (Bu container stop edildiğinde sil)
+-p 8888:80 (80 portunu 8888 portuna yönlendir
+--name web_nginx2( container adı)
+-v (Volume)
+/home/hamit/Desktop/web (buradaki veriyi aşağıdaki adresin içindekiyle değiştir
+:/usr/share/nginx/html   (Değişecek yer)
+nginx (image Adı)
 
+-- VOLUME
+docker search alpine
+docker pull alpine
+docker volume create hamitmizrak_volume
+docker volume ls
+docker volume inspect hamitmizrak_volume
+docker container run -it -v hamitmizrak_volume:/yeniKlasor ubuntu bash
 
+docker search mysql
+docker pull mysql
+docker ps
+docker image ls
+netstat -nlptu
+NOT: mysql 3306(default)
+docker container run -p 3306:3306 --name my_special_mysql -e MYSQL_ROOT_PASSWORD=root mysql
+docker container ls
+docker container inspect my_special_mysql
+docker container exec -it my_special_mysql bash
+mysql -u root -p
+password: root
 
-
-
+# Database oluştur
+# tablo oluştur
+# tabloya veri ekle
+CREATE SCHEMA `docker_volume` DEFAULT CHARACTER SET utf8 COLLATE utf8_turkish_ci ;
+use docker_volume;
+CREATE TABLE `docker_volume`.`persons` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NULL DEFAULT 'adınızı girmediniz',
+  `surname` VARCHAR(450) NULL DEFAULT 'soyadınızı girmediniz',
+  `created_date` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`));
+INSERT INTO `docker_volume`.`persons` (`name`, `surname`) VALUES ('Hamit', 'Mızrak');
+select * from persons;
 
 
 
