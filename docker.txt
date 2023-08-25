@@ -33,3 +33,24 @@ docker container start -ai containerID
 docker search ubuntu
 docker pull ubuntu
 docker pull centos
+
+--- VOLUME
+docker search nginx
+docker pull nginx
+docker container run -d --rm  -p 7777:80 --name web_nginx nginx
+docker container exec -it web bash
+
+pwd
+docker container run -d --rm  -p 8888:80 --name web_nginx2 -v /home/hamit/Desktop/web:/usr/share/nginx/html   nginx
+
+
+
+
+
+
+
+
+
+
+
+
